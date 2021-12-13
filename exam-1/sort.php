@@ -2,7 +2,7 @@
 require_once($_SERVER['DOCUMENT_ROOT'].'/include/header.php');
 require_once($_SERVER['DOCUMENT_ROOT'].'/include/aside.php');
 global $DB;
-$query = $DB::$mysqli->query('SELECT w.id AS id, w.fio AS fio, w.position AS position, d.name AS name, w.salary AS salary FROM workers AS w, departments AS d WHERE w.department_id = d.id');
+$query = $DB::$mysqli->query('SELECT w.id AS id, w.fio AS fio, w.position AS position, d.name AS name, w.salary AS salary FROM workers AS w, departments AS d WHERE w.department_id = d.id ORDER BY w.fio ASC');
 ?>
     <main>
         <h1>Фильтрация</h1>
